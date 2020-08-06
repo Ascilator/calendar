@@ -1,0 +1,141 @@
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  font-family: "Yandex Sans Text", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*====================================================================================*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.container .calendar {
+  border: 1px solid #0003;
+  overflow: hidden;
+}
+.container .calendar .header_part {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 22px 30px;
+}
+.container .calendar .header_part .calendar_title {
+  font-size: 25px;
+  font-weight: 500;
+}
+.container .calendar .header_part .cross_or_arrow {
+  position: relative;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  margin-top: 3px;
+}
+.container .calendar .header_part .cross_or_arrow span:before, .container .calendar .header_part .cross_or_arrow span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: 23px;
+  height: 2px;
+  background-color: #c4c4c4;
+}
+.container .calendar .header_part .cross_or_arrow span:before {
+  transform: translateY(-50%) rotate(45deg);
+}
+.container .calendar .header_part .cross_or_arrow span:after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+.container .calendar .calendar_body .result_part {
+  height: 20px;
+  text-align: right;
+  margin: 0 40px;
+  font-size: 15px;
+}
+.container .calendar .calendar_body .arrows_block {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(100%);
+  margin: 0 20px;
+}
+.container .calendar .calendar_body .arrows_block .prev, .container .calendar .calendar_body .arrows_block .next {
+  cursor: pointer;
+}
+.container .calendar .calendar_body .arrows_block .prev {
+  transform: rotate(180deg);
+}
+.container .calendar .calendar_body .middle_part {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.container .calendar .calendar_body .middle_part .year_item {
+  flex: 0 1 50%;
+  margin: 0 12px;
+}
+.container .calendar .calendar_body .middle_part .year_item .number_of_year {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.container .calendar .calendar_body .middle_part .year_item .mounth_list {
+  display: flex;
+}
+.container .calendar .calendar_body .middle_part .year_item .mounth_list .column {
+  text-align: center;
+}
+.container .calendar .calendar_body .middle_part .year_item .mounth_list .column .mounth_number {
+  font-size: 14px;
+  margin: 0 0 25px;
+  cursor: pointer;
+}
+.container .calendar .calendar_body .middle_part .year_item .mounth_list .column .mounth_number span {
+  border-radius: 20%;
+  padding: 5px;
+}
+.container .calendar .calendar_body .middle_part .year_item .mounth_list .column .mounth_number._active span {
+  color: #fff;
+  background: #3383c4;
+}
+.container .calendar .calendar_body .middle_part .year_item .mounth_list .column:first-child {
+  text-align: left;
+}
+.container .calendar .calendar_body .middle_part .year_item .mounth_list .column:nth-child(2) {
+  margin: 0 22px 0 22px;
+}
+.container .calendar .calendar_body .bottom_part {
+  border-top: 1px solid #0003;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 40px;
+  padding: 20px 0 0;
+}
+.container .calendar .calendar_body .bottom_part .choose_btn, .container .calendar .calendar_body .bottom_part .cancel_btn {
+  margin: 0 10px;
+  font-size: 14px;
+  padding: 12px 0;
+  width: 170px;
+  text-align: center;
+  background: #FFCC00;
+  cursor: pointer;
+}
+.container .calendar .calendar_body .bottom_part .choose_btn {
+  border-radius: 3px;
+}
+.container .calendar .calendar_body .bottom_part .cancel_btn {
+  background: #e5e5e5;
+}
